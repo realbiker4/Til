@@ -1,6 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
-#include<math.h>
 
 int main(void)
 {
@@ -21,10 +20,10 @@ int main(void)
 			scanf("%lf", &stdScore);
 			score[j][i] = stdScore;
 		}
-		for (int i = 0; i < stdNum; i++)
+		for (int p = 0; p < stdNum; p++)
 		{
 
-			avg = avg + score[j][i];
+			avg = avg + score[j][p];
 		}
 		avg = avg / stdNum;
 		averageDb[j] = avg;
