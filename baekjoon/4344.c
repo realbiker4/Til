@@ -5,20 +5,20 @@
 int main(void)
 {
 	int num;
-	int count = 0;
-	int score[1000][10];
+	double count = 0;
+	double score[1000][10];
 	double avg = 0;
 	double averageDb[1000];
 	double countDb[1000];
+	double stdScore;
+	int stdNum;
 	scanf("%d", &num);
 	for (int j = 0; j < num; j++)
 	{
-		int stdNum;
 		scanf("%d", &stdNum);
 		for (int i = 0; i < stdNum; i++)
 		{
-			int stdScore;
-			scanf("%d", &stdScore);
+			scanf("%lf", &stdScore);
 			score[j][i] = stdScore;
 		}
 		for (int i = 0; i < stdNum; i++)
@@ -36,14 +36,13 @@ int main(void)
 				count += 1;
 			}
 		}
-		countDb[j] = count *100 /num;
+		countDb[j] = (count *100) /(double)stdNum;
 		count = 0;
 	}
 
 	for (int p = 0; p < num; p++)
 	{
-		printf("%0.3lf% \n", countDb[p]);
+		printf("%0.3lf%% \n", countDb[p]);
 	}
 	return 0;
 }
-
