@@ -1,16 +1,16 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 
-struct student
+typedef struct
 {
 	char name[10];
 	char tel[15];
 	int age;
-};
+} student;
 
 int main(void)
 {
-	struct student info;
+	student info;
 
 	printf("name:");
 	scanf("%s", info.name);
